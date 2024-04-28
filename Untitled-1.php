@@ -6,11 +6,6 @@
         {
             echo 'Educar: ' . $string . PHP_EOL;
         }
-
-        private function printPHP()
-        {
-            echo 'PHP is great.' . PHP_EOL;
-        }
     }
 
     class Inteligencia extends Educacion
@@ -26,16 +21,22 @@
     $bunyar->printItem("Hello");
 
     //--------------------------------------------
-    class animal{
-        private function printPatas($string){
+
+    class animal
+    {
+        private function printPatas($string)
+        {
             echo 'patas' . $string . PHP_EOL;
         }
     }
-    class perro extends animal{
-        public function printPatas($string){
+    class perro extends animal
+    {
+        public function printPatas($string)
+        {
             echo '4 ' . $string . PHP_EOL;
         }
     }
     $boby = new perro;
-    $boby->printPatas("Tiene"); 
+    $boby->printPatas("Tiene");
+    
 ?>
