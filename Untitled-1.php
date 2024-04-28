@@ -25,4 +25,6 @@
     $bunyar = new Inteligencia();
     $bunyar->printItem("Hello");
 
+    #eres un trome pero de tromes leito
+
 ?>
