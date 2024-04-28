@@ -1,41 +1,23 @@
 <?php
     
-    class Educacion
+    class Frutas
     {
-        private function printItem($string)
+        private function printColor($string)
         {
-            echo 'Educar: ' . $string . PHP_EOL;
+            echo 'Color' . $string . PHP_EOL;
         }
 
-        private function printPHP()
-        {
-            echo 'PHP is great.' . PHP_EOL;
-        }
     }
 
-    class Inteligencia extends Educacion
+    class Uva extends Frutas
     {
-        private function printItem($string)
+        public function printColor()
         {
-            parent::printItem($string);
-            echo 'Inteligencia->: ' . $string . PHP_EOL;
+            echo 'morado' . $string . PHP_EOL;
         }
     }
 
-    $bunyar = new Inteligencia();
-    $bunyar->printItem("Hello");
+    $bunyar = new Uva();
+    $bunyar->printColor();
 
-    //--------------------------------------------
-    class animal{
-        private function printPatas($string){
-            echo 'patas' . $string . PHP_EOL;
-        }
-    }
-    class perro extends animal{
-        public function printPatas($string){
-            echo '4 ' . $string . PHP_EOL;
-        }
-    }
-    $boby = new perro;
-    $boby->printPatas("Tiene"); 
 ?>
