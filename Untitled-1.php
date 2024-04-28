@@ -25,6 +25,17 @@
     $bunyar = new Inteligencia();
     $bunyar->printItem("Hello");
 
-    #eres un trome pero de tromes leito
-
+    //--------------------------------------------
+    class animal{
+        private function printPatas($string){
+            echo "patas";
+        }
+    }
+    class perro extends animal{
+        public function printPatas(){
+            echo "4 " . $string . PHP_EOL;
+        }
+    }
+    $boby = new perro;
+    $boby->printPatas("Tiene")    
 ?>
