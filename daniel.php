@@ -73,4 +73,19 @@ class latinoAmerica extends pais{
 }
 $peru = new latinoAmerica;
 $peru->printCapital("Perú");
+
+//6
+class profesion{
+    public function printSalario($string){
+        echo 'salario estimado es '. $string . PHP_EOL;
+    }
+}
+class universidad extends profesion{
+    public function printSalario($string)
+    {
+        echo 'salario universitario' . $string . PHP_EOL;
+    }
+}
+$ingenieria = new universidad;
+$ingenieria->printSalario("2500");
 ?>
