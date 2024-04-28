@@ -1,27 +1,5 @@
 <?php
     
-    class Educacion
-    {
-        private function printItem($string)
-        {
-            echo 'Educar: ' . $string . PHP_EOL;
-        }
-    }
-
-    class Inteligencia extends Educacion
-    {
-        private function printItem($string)
-        {
-            parent::printItem($string);
-            echo 'Inteligencia->: ' . $string . PHP_EOL;
-        }
-    }
-
-    $bunyar = new Inteligencia();
-    $bunyar->printItem("Hello");
-
-    //--------------------------------------------
-
     class animal
     {
         private function printPatas($string)
@@ -33,10 +11,32 @@
     {
         public function printPatas($string)
         {
-            echo '4 ' . $string . PHP_EOL;
+            echo '-> tiene' . $string . PHP_EOL;
         }
     }
     $boby = new perro;
-    $boby->printPatas("Tiene");
+    $boby->printPatas(" 4 ");
+    
+//--------------------------------------------
+
+    class alimentos
+    {
+        private function printEner($string)
+        {
+            echo 'nutrientes' . $string . PHP_EOL;
+        }
+    }
+    class frutas extends alimentos 
+    {
+        public function printEner($string)
+        {
+            echo 'energia' . $string . PHP_EOL;
+        }
+    }
+    $ener = new frutas;
+    $ener->printEner("Muchas ");
+
+//--------------------------------------------
+
     
 ?>
