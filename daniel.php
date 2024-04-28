@@ -58,4 +58,19 @@ class instPercusion extends instMusical{
 }
 $cajon = new instPercusion;
 $cajon->printSonido("cajón");
+
+//5
+class pais{
+    public function printCapital($string){
+        echo 'la capital es ' . $string . PHP_EOL;
+    }
+}
+class latinoAmerica extends pais{
+    public function printCapital($string)
+    {
+        echo $string . ' esta en latino america' . PHP_EOL;
+    }
+}
+$peru = new latinoAmerica;
+$peru->printCapital("Perú");
 ?>
