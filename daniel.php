@@ -103,4 +103,19 @@
     }
     $pizza = new tipComida;
     $pizza->printComida(" Pizza ");
+    
+    //8
+    class estAnio {
+        public function printEstacion($string){
+            echo 'la mejor estacion es ' . $string . PHP_EOL;
+        }
+    }
+    class estacion extends estAnio{
+        public function printEstacion($string)
+        {
+            echo $string . ' esta estacion es muy bonita' . PHP_EOL;
+        }
+    }
+    $verano = new estacion;
+    $verano->printEstacion("verano");
 ?>
