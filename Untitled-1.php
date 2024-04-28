@@ -11,7 +11,7 @@
 
     class Uva extends Frutas
     {
-        public function printColor()
+        public function printColor($string)
         {
             echo 'morado' . $string . PHP_EOL;
         }
