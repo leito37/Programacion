@@ -1,5 +1,5 @@
 <?php
-    //15 ejemplos de herencia public
+    5 ejemplos de herencia public
     //1
     class animal{
         public function printPatas($string){
@@ -118,4 +118,116 @@
     }
     $verano = new estacion;
     $verano->printEstacion("verano");
+
+    //9
+    class deporte{
+        public function printJugar($string){
+            echo 'estamos jugando ' . $string . PHP_EOL;
+        }
+    }
+    class tenis extends deporte{
+        public function printJugar($string){
+            parent::printJugar($string);
+            echo $string . ' es divertido' . PHP_EOL;
+        }
+    }
+    $tenis = new tenis;
+    $tenis->printJugar("Tenis");
+
+    //10
+    class tipMusica{
+        public function printDecivelios($string){
+            echo $string . 'tiene buenos deciveles' . PHP_EOL;
+        }
+    }
+    class electronica extends tipMusica{
+        public function printDecivelios($string)
+        {
+            echo 'son correctos los deciveles de ' . $string . PHP_EOL;
+        }
+    }
+    $electro = new electronica;
+    $electro->printDecivelios(" Musica Electronica ");
+
+    //11
+    class elemQuimico{
+        public function printElemen($string)
+        {
+            echo 'Elemento Quimico' . $string . PHP_EOL;
+        }
+    }
+    class oxigeno extends elemQuimico{
+        public function printPeso($string)
+        {
+            parent::printElemen($string);
+            echo ' Peso Atomico -> ' . $string . PHP_EOL;
+        }
+    }
+    $h2o = new oxigeno;
+    $h2o->printPeso(" Oxigeno ");
+
+    //12
+    class bebida{
+        public function printBeber($string){
+            echo 'Tomar ' . $string . PHP_EOL;
+        }
+    }
+    class cafe extends bebida{
+        public function printBeber($string)
+        {
+            parent::printBeber($string);
+            echo ' es refrescante' . PHP_EOL;
+        }
+    }
+    $cafe = new cafe;
+    $cafe->printBeber(" cafe ");
+
+    //13
+    class marcRopa{
+        public function printMarca($string){
+            echo 'la marca'. $string . PHP_EOL;
+        }
+    }
+    class nike extends marcRopa{
+        public function printMarca($string)
+        {
+            parent::printMarca($string);
+            echo ' es comoda' . PHP_EOL;
+        }
+    }
+    $nike = new nike;
+    $nike->printMarca(" Nike ");
+
+    /14
+    class tecnologia{
+        public function printAccesorio($string){
+            echo 'Tecnologia ' . PHP_EOL;
+        }
+    }
+    class celular extends tecnologia{
+        public function printAccesorio($string)
+        {
+            parent::printAccesorio($string);
+            echo $string . ' tiene celulares.' . PHP_EOL;
+        }
+    }
+    $samsung = new celular;
+    $samsung->printAccesorio(" samsung ");
+
+    //15
+    class instCocina{
+        public function printTamanio($string){
+            echo 'Tamaño ' . PHP_EOL;
+        }
+    }
+    class olla extends instCocina{
+        public function printTamanio($string)
+        {
+            parent::printTamanio($string);
+            echo $string . ' es la olla ' . PHP_EOL;
+        }
+    }
+    $grande = new olla;
+    $grande->printTamanio(" grande");
+
 ?>
