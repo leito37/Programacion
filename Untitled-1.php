@@ -22,9 +22,9 @@
             echo '-> Uva' . $string . PHP_EOL;
         }
     }
-    $boby = new Uva;
-    $boby->printPHP();
-    $boby->printColor(" Dulce");
+    $a = new Uva;
+    $a->printPHP();
+    $a->printColor(" Dulce");
 
     //2)----------------------------------------------------
 
@@ -48,9 +48,9 @@
             echo '-> Papa' . $string . PHP_EOL;
         }
     }
-    $boby = new Papa;
-    $boby->printPHP();
-    $boby->printTamanio(" Minerales");
+    $b = new Papa;
+    $b->printPHP();
+    $b->printTamanio(" Minerales");
 
     //3)--------------------------------------------------
 
@@ -74,9 +74,9 @@
             echo '-> Borrador' . $string . PHP_EOL;
         }
     }
-    $boby = new Borrador;
-    $boby->printPHP();
-    $boby->printForma(" Formas");
+    $c = new Borrador;
+    $c->printPHP();
+    $c->printForma(" Formas");
 
     //4)---------------------------------------------------
 
@@ -99,9 +99,9 @@
             echo '-> Pelota' . $string . PHP_EOL;
         }
     }
-    $boby = new Pelota;
-    $boby->printPHP();
-    $boby->printDiv(" Divierte");
+    $d = new Pelota;
+    $d->printPHP();
+    $d->printDiv(" Divierte");
 
     //5)----------------------------------------------------
 
@@ -124,9 +124,9 @@
             echo '-> Base' . $string . PHP_EOL;
         }
     }
-    $boby = new Base;
-    $boby->printPHP();
-    $boby->printTono(" Claro");
+    $e = new Base;
+    $e->printPHP();
+    $e->printTono(" Claro");
 
     //6)---------------------------------------------------
 
@@ -150,9 +150,9 @@
             echo '-> Vestido' . $string . PHP_EOL;
         }
     }
-    $boby = new Vestido;
-    $boby->printPHP();
-    $boby->printColor(" Lila");
+    $f = new Vestido;
+    $f->printPHP();
+    $f->printColor(" Lila");
 
     //7)--------------------------------------------------
 
@@ -176,9 +176,9 @@
             echo '-> Pincel' . $string . PHP_EOL;
         }
     }
-    $boby = new Pincel;
-    $boby->printPHP();
-    $boby->printTamanio(" Pintar");
+    $g = new Pincel;
+    $g->printPHP();
+    $g->printTamanio(" Pintar");
 
     //8)----------------------------------------------------
 
@@ -201,9 +201,9 @@
             echo '-> Celular' . $string . PHP_EOL;
         }
     }
-    $boby = new Celular;
-    $boby->printPHP();
-    $boby->printMarca(" Samsung");
+    $h = new Celular;
+    $h->printPHP();
+    $h->printMarca(" Samsung");
 
     //9)----------------------------------------------------
 
@@ -227,9 +227,9 @@
         }
 
     }
-    $boby = new Invierno;
-    $boby->printPHP();
-    $boby->printTemp(" Frio");
+    $i = new Invierno;
+    $i->printPHP();
+    $i->printTemp(" Frio");
 
     //10)---------------------------------------------------
 
@@ -252,9 +252,9 @@
             echo '-> Oxigeno' . $string . PHP_EOL;
         }
     }
-    $boby = new Oxigeno;
-    $boby->printPHP();
-    $boby->printPes(" Peso Atomico");
+    $j = new Oxigeno;
+    $j->printPHP();
+    $j->printPes(" Peso Atomico");
 
     //11)---------------------------------------------------
 
@@ -277,9 +277,9 @@
             echo '-> Ingenieria ' . $string . PHP_EOL; 
         }
     }
-    $boby = new Ingenieria;
-    $boby->printPHP();
-    $boby->printPro(" Matematicas");
+    $k = new Ingenieria;
+    $k->printPHP();
+    $k->printPro(" Matematicas");
 
     //12)---------------------------------------------------
 
@@ -302,9 +302,9 @@
             echo '-> Novela' . $string . PHP_EOL;
         }
     }
-    $boby = new Novela;
-    $boby->printPHP();
-    $boby->printLite(" Emocion ");
+    $l = new Novela;
+    $l->printPHP();
+    $l->printLite(" Emocion ");
 
     //13)---------------------------------------------------
 
@@ -327,9 +327,9 @@
             echo '-> Futbol' . $string . PHP_EOL;
         }
     }
-    $boby= new futbol;
-    $boby->printPHP();
-    $boby->printDep(" Ejercita");
+    $m= new futbol;
+    $m->printPHP();
+    $m->printDep(" Ejercita");
 
     //14)---------------------------------------------------
 
@@ -352,9 +352,9 @@
             echo '-> Metal ' . $string . PHP_EOL;
         }
     }
-    $boby= new Metal;
-    $boby->printPHP();
-    $boby->printMat(" Resistente");
+    $n= new Metal;
+    $n->printPHP();
+    $n->printMat(" Resistente");
 
     //15)---------------------------------------------------
 
@@ -377,8 +377,8 @@
             echo '-> Terrestre' . $string . PHP_EOL;
         }
     }
-    $boby= new Terrestre;
-    $boby->printPHP();
-    $boby->printTip(" traslada");
+    $o= new Terrestre;
+    $o->printPHP();
+    $o->printTip(" traslada");
     
 ?>
