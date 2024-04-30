@@ -382,3 +382,327 @@
     $o->printTip(" traslada");
     
 ?>
+
+//----------------------Clase base Figura-------------------------
+
+class Figura 
+{
+    public $color;
+    public $area;
+
+    public function calcularArea() 
+    {
+        $this->area = 0;
+    }
+
+    public function dibujar() 
+    {
+        echo "Dibujando figura..." . PHP_EOL;
+    }
+}
+
+//-----------------------Subclase Circulo-------------------------
+
+class Circulo extends Figura 
+{
+    public $radio;
+
+    public function calcularArea() 
+    {
+        $this->area = pi() * pow($this->radio, 2);
+    }
+
+    public function dibujar() 
+    {
+        echo "<p>Dibujando círculo..." . PHP_EOL;
+    }
+}
+
+//---------------------Subclase Rectangulo------------------------
+
+class Rectangulo extends Figura 
+{
+    public $base;
+    public $altura;
+
+    public function calcularArea() 
+    {
+        $this->area = $this->base * $this->altura;
+    }
+
+    public function dibujar() 
+    {
+        echo "<p>Dibujando rectángulo..." . PHP_EOL;
+    }
+}
+
+//------Crear objetos Circulo y Rectangulo y mostrar sus áreas------
+
+$circulo = new Circulo();
+$circulo->radio = 5;
+$circulo->calcularArea();
+
+$rectangulo = new Rectangulo();
+$rectangulo->base = 4;
+$rectangulo->altura = 3;
+$rectangulo->calcularArea();
+
+echo "Área del círculo: " . $circulo->area . PHP_EOL;
+echo "<p>Área del rectángulo: " . $rectangulo->area . PHP_EOL;
+
+//--------------Llamar al método dibujar de cada figura--------------
+
+$circulo->dibujar();
+$rectangulo->dibujar();
+
+//---------------------------Clase Empleado---------------------------
+
+class Empleado 
+{
+    public $nombre;
+    public $salario;
+
+    public function calcularPago()
+    {
+        return $this->salario;
+    }
+}
+
+//---------------------------Subclase Gerente---------------------------
+class Gerente extends Empleado 
+{
+    public $departamento;
+
+    public function calcularPago() 
+    {
+        return parent::calcularPago() + 1000; // Añadir bono adicional al salario base
+    }
+}
+
+//--------Crear objetos Empleado y Gerente y mostrar sus propiedades--------
+
+$empleado = new Empleado();
+$empleado->nombre = "Juan";
+$empleado->salario = 2000;
+
+$gerente = new Gerente();
+$gerente->nombre = "Ana";
+$gerente->salario = 3000;
+$gerente->departamento = "Ventas";
+
+echo "<p>Nombre del empleado: " . $empleado->nombre . ", Salario: $" . $empleado->salario . PHP_EOL;
+echo "<p>Nombre del gerente: " . $gerente->nombre . ", Salario: $" . $gerente->salario . ", Departamento: " . $gerente->departamento . PHP_EOL;
+
+//---------------------------Clase Vehiculo---------------------------
+
+class Vehiculo 
+{
+    public $marca;
+    public $modelo;
+
+    public function arrancar() 
+    {
+        echo "Arrancando vehículo..." . PHP_EOL;
+    }
+}
+
+//---------------------------Subclase Coche---------------------------
+
+class Coche extends Vehiculo 
+{
+    public $numPuertas;
+}
+
+//---------------------------Subclase Camion---------------------------
+
+class Camion extends Vehiculo 
+{
+    public $cargaMaxima;
+}
+
+//--------Crear objetos Coche y Camion y mostrar sus propiedades--------
+
+$coche = new Coche();
+$coche->marca = "Toyota";
+$coche->modelo = "Corolla";
+$coche->numPuertas = 4;
+
+$camion = new Camion();
+$camion->marca = "Volvo";
+$camion->modelo = "FH16";
+$camion->cargaMaxima = "10 toneladas";
+
+echo "<p>Coche: " . $coche->marca . " " . $coche->modelo . ", Número de puertas: " . $coche->numPuertas . PHP_EOL;
+echo "<p>Camión: " . $camion->marca . " " . $camion->modelo . ", Carga máxima: " . $camion->cargaMaxima . PHP_EOL;
+
+//---------------------------Clase Animal---------------------------
+
+class Animal 
+{
+    public $nombre;
+    public $edad;
+}
+
+//---------------------------Subclase Perro---------------------------
+
+class Perro extends Animal 
+{
+    public $raza;
+
+    public function hacerSonido() 
+    {
+        echo "Ladrando..." . PHP_EOL;
+    }
+}
+
+//---------------------------Subclase Gato---------------------------
+
+class Gato extends Animal {
+    public $color;
+
+    public function hacerSonido() 
+    {
+        echo "Maullando..." . PHP_EOL;
+    }
+}
+
+//--------Crear objetos Perro y Gato y mostrar sus propiedades--------
+
+$perro = new Perro();
+$perro->nombre = "Bobby";
+$perro->edad = 3;
+$perro->raza = "Labrador";
+
+$gato = new Gato();
+$gato->nombre = "Whiskers";
+$gato->edad = 2;
+$gato->color = "Negro";
+
+echo "<p>Perro: " . $perro->nombre . ", Edad: " . $perro->edad . ", Raza: " . $perro->raza . PHP_EOL;
+echo "<p>Gato: " . $gato->nombre . ", Edad: " . $gato->edad . ", Color: " . $gato->color . PHP_EOL;
+
+//---------------------------Clase Fruta---------------------------
+class Fruta 
+{
+    public $nombre;
+    public $color;
+
+    public function comer() 
+    {
+        echo "Comiendo fruta..." . PHP_EOL;
+    }
+}
+
+//---------------------------Subclase Manzana---------------------------
+
+class Manzana extends Fruta 
+{
+    public $sabor;
+
+    public function comer() 
+    {
+        echo "Comiendo manzana..." . PHP_EOL;
+    }
+}
+
+//---------------------------Subclase Banana---------------------------
+
+class Banana extends Fruta 
+{
+    public $longitud;
+
+    public function comer() 
+    {
+        echo "Comiendo banana..." . PHP_EOL;
+    }
+}
+
+//-------Crear objetos Manzana y Banana y mostrar sus propiedades-------
+
+$manzana = new Manzana();
+$manzana->nombre = "Manzana Fuji";
+$manzana->color = "Roja";
+$manzana->sabor = "Dulce";
+
+$banana = new Banana();
+$banana->nombre = "Banana Cavendish";
+$banana->color = "Amarilla";
+$banana->longitud = "20 cm";
+
+echo "<p>Manzana: " . $manzana->nombre . ", Color: " . $manzana->color . ", Sabor: " . $manzana->sabor . PHP_EOL;
+echo "<p>Banana: " . $banana->nombre . ", Color: " . $banana->color . ", Longitud: " . $banana->longitud . PHP_EOL;
+
+//---------------------------Clase Persona---------------------------
+
+class Persona 
+{
+    public $nombre;
+    public $edad;
+
+    public function presentarse() 
+    {
+        echo "Hola, soy {$this->nombre} y tengo {$this->edad} años." . PHP_EOL;
+    }
+}
+
+//---------------------------Subclase Estudiante---------------------------
+
+class Estudiante extends Persona 
+{
+    public $grado;
+
+    public function presentarse() 
+    {
+        parent::presentarse();
+        echo "Soy un estudiante de {$this->grado}." . PHP_EOL;
+    }
+}
+
+//---------------------------Subclase Profesor---------------------------
+
+class Profesor extends Persona 
+{
+    public $especialidad;
+
+    public function presentarse() 
+    {
+        parent::presentarse();
+        echo "Soy un profesor especializado en {$this->especialidad}." . PHP_EOL;
+    }
+}
+
+//------Crear objetos Estudiante y Profesor y mostrar sus propiedades------
+
+$estudiante = new Estudiante();
+$estudiante->nombre = "Juan";
+$estudiante->edad = 20;
+$estudiante->grado = "ingeniería";
+
+$profesor = new Profesor();
+$profesor->nombre = "Ana";
+$profesor->edad = 35;
+$profesor->especialidad = "matemáticas";
+
+echo "<p>Estudiante: " . $estudiante->nombre . ", Edad: " . $estudiante->edad . ", Grado: " . $estudiante->grado . PHP_EOL;
+echo "<p>Profesor: " . $profesor->nombre . ", Edad: " . $profesor->edad . ", Especialidad: " . $profesor->especialidad . PHP_EOL;
+
+//---------------------------Clase Forma---------------------------
+
+class Forma 
+{
+    public $nombre;
+    public $lados;
+}
+
+//---------------------------Subclase Triangulo---------------------------
+class Triangulo extends Forma 
+{
+    public $angulos;
+}
+
+//---------------------------Subclase Cuadrado---------------------------
+
+class Cuadrado extends Forma 
+{
+
+}
